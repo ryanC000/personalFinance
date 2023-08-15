@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         View source = findViewById(R.id.editTextText);
         String message = source.toString();
         Log.d("success", message);
+        //added a comment
 
     }
 
