@@ -41,11 +41,24 @@
             android:layout_height="wrap_content"
             android:hint="@string/password_string" />
     </com.google.android.material.textfield.TextInputLayout>
-
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_string" />
-
+    <TextView
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity = "center"
+        android:textStyle = "bold"
+        android:text="Don't have an account? \n Register now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerNow"
+        />
 </LinearLayout>

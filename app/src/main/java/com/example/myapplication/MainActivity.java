@@ -22,14 +22,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void textHandler(View v) {
-        View source = findViewById(R.id.editTextText);
-        String message = source.toString();
-        Log.d("success", message);
-        //changed a comment
-
-    }
-
     public void alert(View v){
         Toast.makeText(this, "Successfully pressed button!", Toast.LENGTH_LONG).show();
     }
