@@ -33,6 +33,17 @@ public class Register extends AppCompatActivity {
     /*onCreate will run when the activity is accessed.
     create an onClickListener to wait for the user to press the button*/
     @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null), then launches main activity
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
@@ -80,6 +91,9 @@ public class Register extends AppCompatActivity {
                                     Toast.makeText(Register.this, "Account created.",
                                             Toast.LENGTH_SHORT).show();
                                     progressBar.setVisibility(View.GONE);
+                                    Intent i = new Intent(getApplicationContext(), Login.class);
+                                    startActivity(i);
+                                    finish();
 
                                 } else {
                                     // If sign in fails, display a message to the user.
