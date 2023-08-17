@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.ktx.Firebase;
 
 public class MainActivity extends AppCompatActivity {
+    //added comment
     TextView userDetails;
     Button button_logout;
     FirebaseAuth auth;
