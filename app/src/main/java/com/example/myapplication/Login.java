@@ -35,6 +35,7 @@ public class Login extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
             finish();
+            // testing
         }
     }
     @Override
@@ -90,7 +91,6 @@ public class Login extends AppCompatActivity {
 
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    // testing
                                     Toast.makeText(Login.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 
