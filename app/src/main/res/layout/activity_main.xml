@@ -23,10 +23,15 @@
         android:id="@+id/logout"
         android:text="Logout"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/budget"
+        android:text="Budget (View more)"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile"
+        android:text="Profile"/>
 </LinearLayout>

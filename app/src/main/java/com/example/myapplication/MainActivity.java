@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     //added comment
     TextView userDetails;
     Button button_logout;
+    Button button_profile;
     FirebaseAuth auth;
     FirebaseUser user;
     @Override
@@ -49,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        /*button_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), Profile.class);
+                startActivity(i);
+                finish();
+            }
+        });*/
     }
 
 }
