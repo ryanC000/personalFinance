@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             userDetails.setText(user.getEmail());
         }
-
+// yh add comment
         button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
