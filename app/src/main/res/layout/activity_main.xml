@@ -36,4 +36,12 @@
         android:layout_height="wrap_content"
         android:onClick="launchProfile"
         android:text="Profile" />
+
+    <Button
+        android:id="@+id/inputSpending"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:onClick="openInputSpending"/>
+
 </LinearLayout>

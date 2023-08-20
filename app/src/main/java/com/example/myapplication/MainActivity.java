@@ -75,4 +75,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+    public void openInputSpending(View view) {
+        startActivity(new Intent(this,InputSpending.class));
+    }
 }
