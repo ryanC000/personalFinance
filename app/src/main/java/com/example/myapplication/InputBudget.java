@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class InputBudget extends AppCompatActivity {
 
     EditText budgetTotalInput, budgetNameInput;
@@ -36,10 +38,14 @@ public class InputBudget extends AppCompatActivity {
         button_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String totalString = budgetTotalInput.getText().toString();
+                int totalValue = Integer.parseInt(budgetTotalInput.getText().toString()) ;
                 String nameString = budgetNameInput.getText().toString();
-                rootDatabaseRef.child("users").child("user").child("budget").child("budgetValue").setValue(totalString);
-                rootDatabaseRef.child("users").child("user").child("budget").child("budgetName").setValue(nameString);
+
+                HashMap budgetHashMap = new HashMap();
+                budgetHashMap.put("budgetTotal", totalValue);
+                budgetHashMap.put("budgetName", nameString);
+
+                rootDatabaseRef.child("users").child("user").child("budget").setValue(budgetHashMap);
 
                 Intent i = new Intent(getApplication(), Budget.class);
                 startActivity(i);
