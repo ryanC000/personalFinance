@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.ktx.Firebase;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
     //added comment
     TextView userDetails;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         user = auth.getCurrentUser();
 
+
         String currentUserString = user.getEmail().toString();
         //if hte user is null then, open login page
         if (user == null) {
@@ -45,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             userDetails.setText(user.getEmail());
+
+            String userEmail = user.getEmail().toString();
             rootDatabaseRef = FirebaseDatabase.getInstance("https://personal-finance-app-fa1c1-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
-            rootDatabaseRef.child("users").child("user").setValue(currentUserString);
+            rootDatabaseRef.child("users").setValue(userEmail);
         }
 // yh add comment
         button_logout.setOnClickListener(new View.OnClickListener() {

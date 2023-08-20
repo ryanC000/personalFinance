@@ -22,13 +22,12 @@ public class InputBudget extends AppCompatActivity {
     Button button_submit;
     FirebaseAuth mAuth;
     DatabaseReference rootDatabaseRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_budget);
 
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-        //String currentUserString = currentUser.getEmail().toString();
         budgetTotalInput = findViewById(R.id.budgetTotal);
         budgetNameInput = findViewById(R.id.budgetName);
         button_submit = findViewById(R.id.submit);
@@ -40,12 +39,12 @@ public class InputBudget extends AppCompatActivity {
             public void onClick(View view) {
                 int totalValue = Integer.parseInt(budgetTotalInput.getText().toString()) ;
                 String nameString = budgetNameInput.getText().toString();
-
+                String userEmail = "hell0888@gmail.com";
                 HashMap budgetHashMap = new HashMap();
                 budgetHashMap.put("budgetTotal", totalValue);
                 budgetHashMap.put("budgetName", nameString);
 
-                rootDatabaseRef.child("users").child("user").child("budget").setValue(budgetHashMap);
+                rootDatabaseRef.child("users").child("hello888@gmail.com").child("budget").setValue(budgetHashMap);
 
                 Intent i = new Intent(getApplication(), Budget.class);
                 startActivity(i);
