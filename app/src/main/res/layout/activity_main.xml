@@ -24,14 +24,16 @@
         android:text="Logout"/>
 
     <Button
+        android:id="@+id/budget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/budget"
-        android:text="Budget (View more)"/>
+        android:onClick="launchBudget"
+        android:text="Budget (View more)" />
 
     <Button
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/profile"
-        android:text="Profile"/>
+        android:onClick="launchProfile"
+        android:text="Profile" />
 </LinearLayout>

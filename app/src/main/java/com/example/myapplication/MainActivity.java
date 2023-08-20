@@ -50,15 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-        /*button_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Profile.class);
-                startActivity(i);
-                finish();
-            }
-        });*/
     }
+    public void launchProfile(View v) {
+        Intent i = new Intent(getApplicationContext(), Profile.class);
+        startActivity(i);
+        finish();
+    }
+
 
 }
