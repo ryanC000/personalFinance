@@ -39,7 +39,7 @@ public class InputBudget extends AppCompatActivity {
             public void onClick(View view) {
                 int totalValue = Integer.parseInt(budgetTotalInput.getText().toString()) ;
                 String nameString = budgetNameInput.getText().toString();
-                String userEmail = "hell0888@gmail.com";
+
                 HashMap budgetHashMap = new HashMap();
                 budgetHashMap.put("budgetTotal", totalValue);
                 budgetHashMap.put("budgetName", nameString);
