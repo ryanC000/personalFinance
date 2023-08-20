@@ -15,15 +15,14 @@ public class Budget extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
 
-        // Write a message to the database
+        /* Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://personal-finance-app-fa1c1-default-rtdb.asia-southeast1.firebasedatabase.app");
         DatabaseReference myRef = database.getReference("message");
 
-        myRef.setValue("Testing firebase storage -Ryan");
+        myRef.setValue("Testing firebase storage -Ryan");*/
     }
 
     public void backToHome(View v){

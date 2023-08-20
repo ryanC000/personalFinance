@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.ktx.Firebase;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Button button_profile;
     FirebaseAuth auth;
     FirebaseUser user;
+
+    DatabaseReference rootDatabaseRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         userDetails = findViewById(R.id.user_details);
 
         user = auth.getCurrentUser();
+
+        String currentUserString = user.getEmail().toString();
         //if hte user is null then, open login page
         if (user == null) {
             Intent i = new Intent(getApplication(), Login.class);
@@ -39,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             userDetails.setText(user.getEmail());
+            rootDatabaseRef = FirebaseDatabase.getInstance("https://personal-finance-app-fa1c1-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
+            rootDatabaseRef.child("users").child("user").setValue(currentUserString);
         }
 // yh add comment
         button_logout.setOnClickListener(new View.OnClickListener() {
