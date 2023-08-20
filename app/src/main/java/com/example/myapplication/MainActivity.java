@@ -57,5 +57,9 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-
+    public void launchBudget(View v) {
+        Intent i = new Intent(getApplicationContext(), Budget.class);
+        startActivity(i);
+        finish();
+    }
 }
