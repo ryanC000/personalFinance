@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
         else {
             userDetails.setText(user.getEmail());
 
-            String userEmail = user.getEmail().toString();
+            /*String userEmail = user.getEmail().toString();
             rootDatabaseRef = FirebaseDatabase.getInstance("https://personal-finance-app-fa1c1-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
-            rootDatabaseRef.child("users").setValue(userEmail);
+            rootDatabaseRef.child("users").setValue(userEmail);*/
         }
 // yh add comment
         button_logout.setOnClickListener(new View.OnClickListener() {

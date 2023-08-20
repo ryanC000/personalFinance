@@ -44,7 +44,7 @@ public class InputBudget extends AppCompatActivity {
                 budgetHashMap.put("budgetTotal", totalValue);
                 budgetHashMap.put("budgetName", nameString);
 
-                rootDatabaseRef.child("users").child("hello888@gmail.com").child("budget").setValue(budgetHashMap);
+                rootDatabaseRef.child("users").child("user").child("budget").setValue(budgetHashMap);
 
                 Intent i = new Intent(getApplication(), Budget.class);
                 startActivity(i);
