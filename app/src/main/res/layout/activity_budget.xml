@@ -25,14 +25,66 @@
                 android:text="Budget"
                 android:textSize="30dp" />
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/budgetValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="50dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="Name:"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/budgetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="80dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+
             <Button
                 android:id="@+id/addBudget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="launchInputBudget"
-                android:text="Add budget" />
+                android:text="Add budget"
+                />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="*Warning. This will overwrite any previous budget."
+                android:textColor="#D3D3D3"
+                android:textSize="20dp"
+                android:textStyle="italic" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
