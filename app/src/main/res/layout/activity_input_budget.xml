@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Add Budget"
-                android:textSize="30dp" />
+                android:textSize="30dp"/>
 
             <EditText
                 android:id="@+id/budgetTotal"

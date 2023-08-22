@@ -5,12 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InputSpending"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="570dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="572dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Add Spending"
+                android:textSize="30dp"/>
+
+            <EditText
+                android:id="@+id/Amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Amount"
+                android:layout_margin="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="@string/select"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
 
 
-    <TextView
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/spendingDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Details (Optional)"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:onClick="launchInputSpending"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Spending"/>
+        android:layout_marginTop="20dp"
+        android:onClick="backToHome"
+        android:text="Back"/>
 
 </LinearLayout>
