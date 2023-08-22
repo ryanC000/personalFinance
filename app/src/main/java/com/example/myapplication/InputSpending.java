@@ -51,7 +51,7 @@ public class InputSpending extends AppCompatActivity {
 
         spendingAmount = findViewById(R.id.Amount);
         button_submit = findViewById(R.id.submit);
-        rootDatabaseRef = FirebaseDatabase.getInstance("https://console.firebase.google.com/u/1/project/personal-finance-app-fa1c1/database/personal-finance-app-fa1c1-default-rtdb/data/~2F").getReference();
+        rootDatabaseRef = FirebaseDatabase.getInstance("https://personal-finance-app-fa1c1-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
         //.getReference - references the root node in database
         //.child - extension of the root
 
